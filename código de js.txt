@@ -1,0 +1,30 @@
+function showSection(sectionID) {
+    // Selecciona el contenedor de inicio de sesión
+    const loginContainer = document.querySelector('.login-container');
+    if (loginContainer) {
+        loginContainer.style.display = 'none'; // Oculta el contenedor de inicio de sesión
+    }
+
+    // Selecciona la sección correspondiente al ID proporcionado
+    const selectedSection = document.getElementById(sectionID);
+    if (selectedSection) {
+        selectedSection.style.display = 'block'; // Muestra la sección seleccionada
+    }
+}
+
+// Agrega eventos a los enlaces de navegación
+document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        const sectionID = this.getAttribute('href').substring(1); // Obtiene el ID de la sección del atributo href
+        console.log(sectionID); //experimento del concepto depurar 
+        showSection(sectionID); // Llama a la función para mostrar la sección
+    });
+});
+
+// Reutilizo la función showSection para mostrar el otro formulario para el botón de agua potable
+
+document.getElementById('btn-agua-potable').addEventListener('click', function () {
+    showSection('formulario');
+}
+);

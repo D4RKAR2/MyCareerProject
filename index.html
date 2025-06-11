@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <link rel = "stylesheet" href="style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+      <header class="main-header"> 
+     <div class="container">
+        <h1 class="title"> Empresa de acueducto rural</h1>
+        <button class="main-btnlogin">Iniciar sesión</button>
+        <img src="img/EmpresaLogo.jpeg" alt="Logo de la empresa" class="logo" id="logo-inicio">
+     </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a id="link-solicitud" href="#solicitud"><i class="fas fa-file-alt"></i>Solicitud de Servicios</a></li>
+                <li><a href="#atencion"><i class="fas fa-headset"></i>Atención al cliente</a></li>
+                <li><a href="#factura"><i class="fas fa-file-invoice"></i>Factura Virtual</a></li>
+            </ul>
+            <ul class="nav-list">
+                <li><a href="#pagos"><i class="fas fa-credit-card"></i>Puntos y formas de pago</a></li>
+                <li><a href="#cortes"><i class="fas fa-calendar-alt"></i>Programación de cortes</a></li>
+                <li><a href="#acceso"><i class="fas fa-unlock-alt"></i>Transparencia y acceso</a></li>
+            </ul>
+        </nav>
+      </header>
+
+      <!-- Contenedor sitio principal de la web (style="display: none;")-->
+
+    <div class="main-container" >
+        <div class="main-text">
+            <h2>¡BIENVENIDOS!
+                <P class="parrafo-mision">Nuestra Misión es proveer agua potable segura y de calidad, promoviendo el desarrollo y el bienestar de nuestra comunidad rural.</P>
+                <p class="parrafo-frase"> CUIDAR EL AGUA ES ASEGURAR LA VIDA</p>
+            </div>
+        <img src="img/imagen reemplazada.jpg" alt="Imagen de fondo" class="background-image">
+
+        
+      <!--informacion como captaciones, plantas de tratamiento, etc.-->
+
+        <div class="main-info">
+            <div class="info-item">
+                <img src="img/capatacion.jpg" alt="captaciones">
+                <h3>Captaciones</h3>
+                <!--<p>Contamos con 5 captaciones de agua que garantizan el suministro a nuestra comunidad.</p>-->
+            </div>
+            <div class="info-item">
+                <img src="img/planta.jpg" alt="planta de tratamiento">
+                <h3>Plantas de Tratamiento</h3>
+            </div>
+            <div class="info-item">
+                <img src="img/redes.jpeg" alt="redes de distribución">
+                <h3>Redes de Distribución</h3>
+            </div>
+            <div class="info-item">
+                <img src="img/comunidad.jpeg" alt="comunidad"> 
+                <h3>Trabajamos con la comunidad</h3>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- Contenedor o formulario de inicio de sesión -->
+
+    <div class = "login-container">
+        <button class="btn-volver" onclick="showMainContainer()"> ← Volver al Inicio</button>
+        <h1 class="form-title">Iniciar Sesión</h1>
+        <form action="/login" method = "POST" >
+            <div class = "form-field">
+                <!-- Crea una etiqueta donde se usa el atributo for y se conecta con id,
+                 cuando se hace click en "Usuario", el cursor se posiciona en el 
+                 campo para digitar texto. Aparte, el atributo type ayuda a definir qué
+                 tipo de datos aceptará el campo-->
+                <label for = "user-role"></label>
+                <select id = "user-role" name = "user-role" required><!-- El atributo required indica que el campo es obligatorio -->
+                    <option value="" disabled selected> Tipo de documento</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="username"> </label>
+                <input type="number" id="username" name="username" placeholder="Número de documento" required minlength="5" maxlength="20"
+                pattern="[0-9]+" title="El número de documento debe contener solo números.">
+            </div>
+
+            <div class = "form-group">
+                <label for="password"> </label>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required minlength="6">
+            </div>
+
+            <div class="clickeable">
+                <p>¿Has olvidado la contraseña?</p>
+            </div>
+
+             <button class="button" type="submit">
+                <span class="icon">⮞&nbsp;</span>  Iniciar sesión
+            </button>
+
+            
+                <p class="register-text">Registrar usuario nuevo</p>
+        </form>
+
+        <div class="register-button">
+           
+            <a href="/register">Registrar</a>
+            
+        </div>
+        </div>
+
+                <!-- <button> 
+                <a href="/register">Registrar</a>
+            </button>
+            -->
+
+            <!-- Contenedor de los servicios -->
+
+        <section id="solicitud" style="display: none;" class="servicios">
+
+            <button class="btn-volver" onclick="showMainContainer()"> ← Volver al Inicio</button>
+
+            <h2 class="form-title">Solicitud de Servicios</h2>
+
+            <button class="button-servicios" id="btn-agua-potable"  type="button">
+                  Agua potable
+            </button>
+
+            <button class="button-servicios" id="btn-expansión-acueducto" type="button">
+                Expansión de acueducto
+          </button>
+
+          <button class="button-servicios" id="btn-mantenimiento-redes"  type="button">
+            Mantenimiento de redes
+      </button>
+        </section>
+
+    <!-- Sección formulario de solicitud de servicio -->
+
+<form style="display: none;" id="formulario">
+        <section id="agua-potable" class="form-section">
+
+            <button class="btn-volver" onclick="showMainContainer()"> ← Volver al Inicio</button>
+
+            <h3 class="form-title">Formulario de solicitud de Servicio</h3>
+    <div class="información">
+
+        <div class="form-group">
+            <label for="información">Nombres y apellidos completos</label>
+            <input type="text" id="nombres" name="nombres" placeholder="Digite sus nombres y apellidos" required>
+        </div>
+
+        <div class="form-group">
+            <label>Dirección</label>
+            <input type="text" id="direccion" name="dirección" placeholder="Digite dirección de hogar" required>
+        </div>
+
+        <div class="form-group">
+            <label>Tipo de vivienda</label>
+            <input type="text" id="vivienda" name="vivienda" placeholder="El tipo de vivienda" required>
+        </div>
+    </div>
+
+   <!-- Sección de lista de chequeo -->
+
+    <div class="document-list">
+        <label class="list-verification">
+             Licencia de construcción <input class="check" type="checkbox">
+        </label>
+    </div>
+
+    <div class="document-list">
+        <label class="list-verification">
+            Impuesto predial <input class="check" type="checkbox">
+        </label>
+    </div>
+
+    <div class="document-list">
+        <label class="list-verification">
+           Certificado de tradición  <input class="check" type="checkbox">
+        </label>
+    </div>
+
+    <button class="button button2" type="submit">
+        Enviar formulario
+    </button>
+
+        </section>
+</form>
+
+        <script src="JavaScript.js"></script>
+</body>
+</html>
