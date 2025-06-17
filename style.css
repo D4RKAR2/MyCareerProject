@@ -442,3 +442,66 @@ select {
         max-width: 300px;
     }
 }
+
+.news-container {
+    display: grid;
+    background-color: #000;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 1800px; /* ← Usar WIDTH en lugar de max-width */
+    height: 1200px; /* ← Altura que quieras */
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    gap: 0; /* ← Asegúrate de tener esto */
+}
+
+.noticia-texto-der {
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.4;
+    flex-direction: column;
+}
+
+
+.noticia-texto-izq {
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.4;
+    flex-direction: column;
+}
+
+.noticia-imagen-der {
+ display: block;
+}
+
+.noiticia-imagen-der img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.noticia-imagen-izq {
+    display: flex;
+    flex: 1;
+
+}
+
+.noticia-imagen-der img,
+.noticia-imagen-izq img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
