@@ -384,28 +384,29 @@ select {
 .main-info {
     background-color: gray;
     padding: 20px;
-    text-align: center; /* Centra el contenido */
     display: flex;
+    justify-content: space-evenly; /* Distribuye con espacios iguales */
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    gap: 240px; /* Espacio entre imágenes */
+    overflow: hidden; /* Controla el desbordamiento */
 }
 
 .info-item {
     position: relative;
-    display: inline-block;
-    width: 220px;
-    align-items: center;
-    margin-bottom: 10px;
-    /* Eliminamos el margin-right: 247px que estaba desbalanceando */
+    width: 300px;
+    height: 260px;
+    margin: 0; /* Sin márgenes irregulares */
+    overflow: hidden; /* Importante: controla el desbordamiento de la imagen */
+    border-radius: 8px; /* Opcional: para bordes limpios */
 }
 
 .info-item img {
-    width: 150%; /* Cambiado de 150% a 100% para mejor proporción */
-    height: 220px;
+    width: 150%; /* Mantienes tu 150% */
+    height: 260px;
     object-fit: cover;
     object-position: center;
-
+    /* Centramos la imagen dentro del contenedor */
+    margin-left: -25%; /* Esto centra la imagen desbordada: (150% - 100%) / 2 = 25% */
 }
 
 .info-item h3 {
@@ -421,4 +422,23 @@ select {
     border-radius: 0 0 8px 8px;
     font-size: 1.1rem;
     z-index: 2;
+}
+
+/* Media queries básicos */
+@media (max-width: 768px) {
+    .main-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .info-item {
+        width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-item {
+        width: 90%;
+        max-width: 300px;
+    }
 }
