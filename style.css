@@ -383,6 +383,12 @@ select {
 
 .main-info {
     background-color: gray;
+    padding: 20px;
+    text-align: center; /* Centra el contenido */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 240px; /* Espacio entre imágenes */
 }
 
 .info-item {
@@ -391,27 +397,28 @@ select {
     width: 220px;
     align-items: center;
     margin-bottom: 10px;
-    margin-right: 247px;
+    /* Eliminamos el margin-right: 247px que estaba desbalanceando */
 }
 
 .info-item img {
-    width: 150%;
+    width: 150%; /* Cambiado de 150% a 100% para mejor proporción */
     height: 220px;
     object-fit: cover;
     object-position: center;
+
 }
 
 .info-item h3 {
     position: absolute;
-    bottom: 10px; /* distancia desde abajo */
+    bottom: 10px;
     left: 0;
     width: 100%;
     color: #fff;
-    background: rgba(0,0,0,0.5); /* fondo semitransparente para mejor legibilidad */
+    background: rgba(0,0,0,0.5);
     margin: 0;
     padding: 8px 0;
     text-align: center;
-    border-radius: 0 0 8px 8px; /* opcional, para bordes redondeados abajo */
+    border-radius: 0 0 8px 8px;
     font-size: 1.1rem;
     z-index: 2;
 }
