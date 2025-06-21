@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif; /* se modifica el tipo de fuente */
+    margin: 0;
 }
 
 .title {
@@ -504,4 +505,103 @@ select {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.footer {
+    background-color: #000;
+    color: #ccc; /* Light gray for text */
+    padding: 30px 50px;
+    font-family: Arial, sans-serif; /* A common sans-serif font */
+}
+
+.footer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+.logo-footer {
+    width: 90px;
+    height: auto;
+    border-radius: 0;
+    object-fit: initial;
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: #444; /* Dark gray line */
+    margin: 15px 0;
+    border: none;
+}
+
+.footer-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-info {
+    flex-grow: 1; /* Allows it to take available space */
+}
+
+.footer-info p {
+    margin: 8px 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.chat-bubble {
+    width: 130px;
+    height: 130px;
+    background-color: #d93025; /* A standard red color */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    flex-shrink: 0; /* Prevents the bubble from shrinking */
+}
+
+.chat-bubble span:first-child {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.chat-bubble span:last-child {
+    font-size: 0.8em;
+    line-height: 1;
+}
+
+.footer-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 25px;
+}
+
+.clickeable-text {
+    color: #ccc;
+    text-decoration: underline;
+    font-size: 0.9em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.clickeable-text:hover {
+    color: #fff;
 }
