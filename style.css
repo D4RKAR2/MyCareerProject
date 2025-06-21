@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif; /* se modifica el tipo de fuente */
+    margin: 0;
 }
 
 .title {
@@ -449,11 +450,11 @@ select {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     width: 1800px; /* ← Usar WIDTH en lugar de max-width */
-    height: 1200px; /* ← Altura que quieras */
+    height: 1200px; 
     padding: 20px;
     margin: 10px auto;
     border-radius: 10px;
-    gap: 0; /* ← Asegúrate de tener esto */
+    gap: 0;
 }
 
 .noticia-texto-der {
@@ -501,7 +502,75 @@ select {
 .noticia-imagen-der img,
 .noticia-imagen-izq img {
     width: 100%;
-    height: 100%;
+    height: 100%; 
     object-fit: cover;
     object-position: center;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 30px;
+    text-align: center;
+    border-top: 3px solid #0077b6;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-header h3 {
+    color: #0077b6;
+    font-size: 24px;
+    margin: 0;
+}
+
+.footer-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0077b6, transparent);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-content p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.logo-footer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.clickeable-text {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0077b6;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.clickeable-text:hover {
+    color: #0056b3;
 }
